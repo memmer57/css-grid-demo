@@ -1,0 +1,134 @@
+/* def grid areas */
+#gallery-map {
+    grid-area: gallery-map;
+}
+#gallery-lighthouse {
+    grid-area: gallery-lighthouse;
+}
+#gallery-mine {
+    grid-area: gallery-mine;
+}
+#gallery-fortress {
+    grid-area: gallery-fortress;
+}
+#gallery-frog {
+    grid-area: gallery-frog;
+}
+#gallery-coast {
+    grid-area: gallery-coast;
+}
+#gallery-castle {
+    grid-area: gallery-castle;
+}
+#gallery-liberty {
+    grid-area: gallery-liberty;
+}
+#gallery-tree {
+    grid-area: gallery-tree;
+}
+figure:has(.other figure img[alt~="Ostrov"]) {
+    grid-area: ostrov;
+}
+figure:has(.other figure img[alt~="Pevnost"]) {
+    grid-area: pevnost;
+}
+figure:has(.other figure img[alt~="Přístav"]) {
+    grid-area: pristav;
+}
+figure:has(.other figure img[alt~="Věž"]) {
+    grid-area: vez;
+}
+figure:has(.other figure img[alt~="Záliv"]) {
+    grid-area: zaliv;
+}
+figure:has(.other figure img[alt~="Zahrada"]) {
+    grid-area: zahrada;
+}
+/* enddef grid areas */
+
+
+/* aside gallery design */
+.other > div {
+    display: grid;
+    grid-template-areas: 
+        'ostrov    pevnost'
+        'pristav   vez'
+        'zaliv     zahrada';
+    column-gap: 4px;
+    row-gap: 6px;
+}
+
+/* grid layout gallery */
+.gallery {
+    display: grid;
+    grid-template-areas: 
+        'gallery-map          gallery-map'
+        'gallery-lighthouse   gallery-mine'
+        'gallery-lighthouse   gallery-frog'
+        'gallery-fortress     gallery-frog'
+        'gallery-coast        gallery-coast'
+        'gallery-castle       gallery-castle'
+        'gallery-liberty      gallery-tree';
+    gap: 4px;
+}
+
+
+
+/* bigger layout */
+@media (min-width: 825px) {
+    body {
+        display: grid;
+    }
+
+    /* aside gallery design */
+    .other > div {
+        padding: 0 15% 0 15%;
+    }
+
+    /* grid layout gallery */
+    .gallery {
+        grid-template-areas: 
+            'gallery-coast       gallery-coast     gallery-liberty    gallery-frog'
+            'gallery-lighthouse  gallery-map       gallery-map        gallery-frog'
+            'gallery-lighthouse  gallery-map       gallery-map        gallery-tree'
+            'gallery-mine        gallery-fortress  gallery-castle     gallery-castle';
+        gap: 6px;
+        padding: 0 4px 0 4px;
+    }
+}
+
+@media (min-width: 1020px) {
+    body > header {
+        grid-area: header;
+    }
+    main {
+        grid-area: gallery;
+    }
+    aside {
+        grid-area: aside;
+    }
+    footer {
+        grid-area: footer;
+    }
+    body {
+        grid-template-areas: 
+            'header header'
+            'aside gallery'
+            'footer footer';
+        grid-template-columns: 20% 80%;
+    }
+
+    .other > div {
+        display: block;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1450px) {
+    body {
+        grid-template-columns: 42.5% 57.5%;
+    }
+    .other > div {
+        display: grid;
+    }
+}

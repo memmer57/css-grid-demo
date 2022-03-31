@@ -1,0 +1,56 @@
+/*
+
+  DO NOT INSERT CSS STYLE HERE!!!
+
+  SEM NEVKLÁDEJ ŽÁDNÝ CSS KÓD!!!
+  
+  KEIN CSS CODE EINFÜGEN!!!
+
+  НЕ ВСТАВЛЯЙТЕ ЛЮБОЙ CSS-КОД!!!
+
+*/
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+body > header, body > footer {
+    background-color: gray;
+    color: whitesmoke;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+header{
+    text-align: center;
+}
+
+
+/* gallery design */
+.gallery figure {
+    position: relative;
+    margin: 0;
+}
+.gallery figure img {
+    width: 100%;
+}
+.gallery figure>figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px; 
+}
+
+/* aside gallery design */
+aside.other figure > img {
+    width: 100%;
+    height: auto;
+}
+
+aside.other div > figure {
+    margin: 0;
+}
